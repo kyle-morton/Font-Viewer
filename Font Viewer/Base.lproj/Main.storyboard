@@ -726,6 +726,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="handleFontFamilySelection:" target="XfG-lQ-9wD" id="Qzx-u4-P3D"/>
+                                </connections>
                             </popUpButton>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zJx-lK-WMc">
                                 <rect key="frame" x="18" y="165" width="335" height="25"/>
@@ -743,6 +746,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="handleFontTypeSelection:" target="XfG-lQ-9wD" id="8X8-bE-yZ8"/>
+                                </connections>
                             </popUpButton>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-zQ-eXG">
                                 <rect key="frame" x="224" y="13" width="132" height="32"/>
@@ -754,6 +760,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="displayAllFonts:" target="XfG-lQ-9wD" id="0j9-iX-BXy"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKt-hy-Xue">
                                 <rect key="frame" x="18" y="70" width="334" height="80"/>
@@ -781,6 +790,11 @@
                             <constraint firstItem="zJx-lK-WMc" firstAttribute="top" secondItem="oyO-WP-AnS" secondAttribute="bottom" constant="20" id="xRt-lp-UNX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fontFamiliesPopup" destination="oyO-WP-AnS" id="cBm-9j-gxi"/>
+                        <outlet property="fontTypesPopup" destination="zJx-lK-WMc" id="bFX-xs-VNV"/>
+                        <outlet property="sampleLabel" destination="yKt-hy-Xue" id="Jbw-0p-q8i"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
