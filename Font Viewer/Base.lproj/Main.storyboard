@@ -764,8 +764,8 @@
                                     <action selector="displayAllFonts:" target="XfG-lQ-9wD" id="0j9-iX-BXy"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKt-hy-Xue">
-                                <rect key="frame" x="18" y="70" width="334" height="80"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yKt-hy-Xue">
+                                <rect key="frame" x="18" y="58" width="334" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="fqp-EI-wPx"/>
                                 </constraints>
@@ -785,7 +785,7 @@
                             <constraint firstAttribute="bottom" secondItem="5vk-zQ-eXG" secondAttribute="bottom" constant="20" id="SEp-95-o2w"/>
                             <constraint firstAttribute="trailing" secondItem="oyO-WP-AnS" secondAttribute="trailing" constant="20" id="iKf-KP-TsI"/>
                             <constraint firstItem="oyO-WP-AnS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="mxy-JI-ON5"/>
-                            <constraint firstItem="yKt-hy-Xue" firstAttribute="top" secondItem="zJx-lK-WMc" secondAttribute="bottom" constant="20" id="sWM-lh-Xqt"/>
+                            <constraint firstItem="yKt-hy-Xue" firstAttribute="top" secondItem="zJx-lK-WMc" secondAttribute="bottom" constant="30" id="sWM-lh-Xqt"/>
                             <constraint firstAttribute="trailing" secondItem="zJx-lK-WMc" secondAttribute="trailing" constant="20" id="toU-5H-qHd"/>
                             <constraint firstItem="zJx-lK-WMc" firstAttribute="top" secondItem="oyO-WP-AnS" secondAttribute="bottom" constant="20" id="xRt-lp-UNX"/>
                         </constraints>

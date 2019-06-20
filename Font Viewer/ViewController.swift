@@ -47,16 +47,21 @@ class ViewController: NSViewController {
     func populateFontFamilies () {
         fontFamiliesPopup.removeAllItems()
         fontFamiliesPopup.addItems(withTitles: NSFontManager.shared.availableFontFamilies)
+        
+        handleFontFamilySelection(self)
     }
     
     func updateFontTypesPopup () {
         fontTypesPopup.removeAllItems()
         
         for member in fontFamilyMembers {
-            if let fontType = member[1] as? String { //REM: swift array indexes start at 1
+            if let fontType = member[1] as? String {
                 fontTypesPopup.addItem(withTitle: fontType)
             }
         }
+        
+        fontTypesPopup.selectItem(at: 0)
+        handleFontTypeSelection(self)
     }
     
     @IBAction func handleFontFamilySelection(_ sender: Any) {
@@ -89,6 +94,24 @@ class ViewController: NSViewController {
     
     @IBAction func handleFontTypeSelection(_ sender: Any) {
         
+        
+        let selectedMember = fontFamilyMembers[fontTypesPopup.indexOfSelectedItem]
+        if let postscriptName = selectedMember[0] as? String,
+            let weight = selectedMember[2] as? Int,
+            let traits = selectedMember[3] as? UInt,
+            let fontFamily = selectedFontFamily {
+            
+            let font = NSFontManager.shared.font(
+                withFamily: fontFamily,
+                traits: NSFontTraitMask(rawValue: traits),
+                weight: weight,
+                size: 19.0
+            )
+            
+            sampleLabel.font = font
+            sampleLabel.stringValue = postscriptName
+            
+        }
     }
     
     @IBAction func displayAllFonts(_ sender: Any)  {
