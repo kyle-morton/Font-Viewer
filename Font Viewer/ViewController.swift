@@ -86,6 +86,8 @@ class ViewController: NSViewController {
                 */
                 
                 updateFontTypesPopup()
+                
+                view.window?.title = fontFamily
             
             }
             
@@ -114,8 +116,21 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func displayAllFonts(_ sender: Any)  {
+    @IBAction func displayAllFonts(_ sender: Any) {
+        let storyboardName = NSStoryboard.Name(stringLiteral: "Main")
+        let storyboard = NSStoryboard(name: storyboardName, bundle: nil)
         
+        let storyboardID = NSStoryboard.SceneIdentifier(stringLiteral: "fontsDisplayStoryboardID")
+        
+        if let fontsDisplayWindowController = storyboard.instantiateController(withIdentifier: storyboardID) as? NSWindowController {
+            
+            if let fontsDisplayVC = fontsDisplayWindowController.contentViewController as? FontsDisplayViewController {
+                fontsDisplayVC.fontFamily = selectedFontFamily
+                fontsDisplayVC.fontFamilyMembers = fontFamilyMembers
+            }
+            
+            fontsDisplayWindowController.showWindow(nil)
+        }
     }
 
 }
